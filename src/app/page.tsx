@@ -294,6 +294,14 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <div className="cost-control-panel">
+            <span>Model cost control</span>
+            <p>
+              AI spend per engineer can climb fast. We route routine work to cheaper open-source
+              models and reserve the strongest frontier models for heavy tasks, automatically
+              abstracted away from your engineers.
+            </p>
+          </div>
           <div className="ownership-strip">
             <span>No platform.</span>
             <span>No lock-in.</span>
