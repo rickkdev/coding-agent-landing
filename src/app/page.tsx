@@ -5,9 +5,6 @@ const painQuestions = [
   ["Model routing", "Which model is best today?"],
   ["Agent policy", "When should we use coding agents?"],
   ["Workflow ROI", "Which workflows actually improve productivity?"],
-  ["Process design", "How should AI fit into our engineering process?"],
-  ["Automation", "What is safe to automate?"],
-  ["Human review", "What should remain human?"],
   ["Standards", "How do we avoid every engineer doing things differently?"],
 ];
 
@@ -21,89 +18,45 @@ const ecosystemSignals = [
 const services = [
   {
     title: "AI Engineering Leadership",
-    body: "We embed with your company as an interim Head of AI Engineering.",
-    details:
-      "Strategy, standards, technology evaluation and adoption across your engineering organization.",
+    body: "Interim AI engineering leadership embedded with your team.",
+    details: "Strategy, standards, technology evaluation and adoption across engineering.",
   },
   {
     title: "Custom Coding Agents",
-    body: "We build coding agents specifically for your company.",
-    details:
-      "Agents understand your codebase, architecture, documentation and engineering standards.",
+    body: "Agents built around your company knowledge.",
+    details: "Codebase, docs, architecture, APIs, runbooks and engineering standards.",
   },
   {
-    title: "Autonomous Engineering Workflows",
-    body: "We build agents that perform real engineering work.",
-    details:
-      "Pull requests, reviews, tests, issue fixes, documentation and project updates under your permissions.",
+    title: "Autonomous Workflows",
+    body: "Agents that perform real engineering work.",
+    details: "Pull requests, reviews, tests, issue fixes and documentation under your permissions.",
   },
   {
     title: "Engineer Enablement",
-    body: "We work alongside your engineers every day.",
-    details:
-      "Real projects, real code and real pull requests. Your engineers learn while shipping.",
-  },
-];
-
-const knowledgeSources = [
-  "Codebase",
-  "Docs",
-  "Standards",
-  "ADRs",
-  "APIs",
-  "Libraries",
-  "Runbooks",
-  "Product",
-];
-
-const reasons = [
-  {
-    title: "The ecosystem changes weekly.",
-    body: "Your engineers shouldn't spend time evaluating every new model, framework or coding workflow. We do that continuously.",
-  },
-  {
-    title: "AI adoption fails without engineering standards.",
-    body: "Without shared workflows every engineer builds differently. We establish repeatable engineering practices your entire organization follows.",
-  },
-  {
-    title: "Everything stays with you.",
-    body: "We don't sell a platform. We build yours.",
-    owned: [
-      "every agent",
-      "every workflow",
-      "every knowledge base",
-      "every integration",
-      "every prompt",
-      "every skill definition",
-      "every internal tool",
-    ],
+    body: "Your engineers learn while shipping.",
+    details: "No generic workshops. Real projects, real code and real pull requests.",
   },
 ];
 
 const timeline = [
   {
     title: "Assess",
-    body: "Understand workflows, bottlenecks and opportunities.",
+    body: "Map workflows, bottlenecks and opportunities.",
     icon: "M20 20h24v24H20zM28 30h8M28 36h12M46 16l6 6-6 6",
   },
   {
     title: "Embed",
-    body: "Our senior AI engineers become part of your engineering team.",
+    body: "Senior AI engineers join your engineering rhythm.",
     icon: "M18 34c0-8 6-14 14-14s14 6 14 14M24 44c3-5 13-5 16 0M32 18v-6M22 22l-4-4M42 22l4-4",
   },
   {
     title: "Build",
-    body: "We implement coding agents, internal knowledge systems and engineering workflows tailored to your organization.",
+    body: "Implement agents, knowledge systems and workflows.",
     icon: "M18 32l8-8M18 32l8 8M46 24l8 8-8 8M36 20l-8 24",
   },
   {
-    title: "Train",
-    body: "Your engineers learn modern AI engineering by working directly alongside us.",
-    icon: "M18 42V22l14-6 14 6v20l-14 6-14-6zM32 16v32M22 30l10 4 10-4",
-  },
-  {
-    title: "Transition",
-    body: "Your team continues independently with the platform, workflows and expertise we've built together.",
+    title: "Transfer",
+    body: "Train your team and leave owned internal capability behind.",
     icon: "M18 38c8 8 20 8 28 0M46 38h-8v-8M18 26c8-8 20-8 28 0M18 26h8v8",
   },
 ];
@@ -119,21 +72,6 @@ const integrations = [
   "Confluence",
 ];
 
-const teamMembers = [
-  {
-    name: "Partner Name",
-    role: "AI Engineering Partner",
-    initials: "PN",
-    pedigree: "Former Staff Engineer. Built production developer platforms, agentic workflows and internal engineering systems.",
-  },
-  {
-    name: "Partner Name",
-    role: "AI Systems Lead",
-    initials: "PN",
-    pedigree: "Former engineering leader. Led platform teams, code quality programs and AI adoption across large codebases.",
-  },
-];
-
 const footerLinks = [
   ["Company", "What we do", "#what-we-do"],
   ["Company", "About", "/about"],
@@ -146,7 +84,7 @@ const footerLinks = [
 
 function IntegrationLogo({ name }: { name: string }) {
   return (
-    <div className="logo-card" aria-label={name} data-reveal-card>
+    <div className="logo-card compact-logo-card" aria-label={name} data-reveal-card>
       <svg viewBox="0 0 220 70" role="img" aria-label={name}>
         {name === "GitHub" && (
           <>
@@ -237,31 +175,6 @@ function HeroVisual() {
   );
 }
 
-function KnowledgeVisual() {
-  return (
-    <div className="knowledge-visual" aria-label="Interconnected knowledge sources feeding intelligent agents">
-      <svg className="knowledge-lines" viewBox="0 0 600 520" aria-hidden="true">
-        <path d="M300 230C210 110 130 100 92 146" />
-        <path d="M300 230C300 92 300 72 300 52" />
-        <path d="M300 230C420 104 496 112 522 154" />
-        <path d="M300 230C174 222 84 224 54 240" />
-        <path d="M300 230C430 220 512 228 548 248" />
-        <path d="M300 230C210 374 134 404 92 388" />
-        <path d="M300 230C300 372 300 428 300 464" />
-        <path d="M300 230C416 374 496 404 526 386" />
-        <path className="strong" d="M300 230C252 300 226 338 198 374" />
-        <path className="strong" d="M300 230C356 300 386 338 412 374" />
-      </svg>
-      <div className="knowledge-core">Company<br />context</div>
-      {knowledgeSources.map((source, index) => (
-        <div className={`knowledge-source source-${index + 1}`} key={source}>{source}</div>
-      ))}
-      <div className="knowledge-agent agent-a">Agent</div>
-      <div className="knowledge-agent agent-b">Agent</div>
-    </div>
-  );
-}
-
 function TimelineIcon({ path }: { path: string }) {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true">
@@ -295,9 +208,8 @@ export default function Home() {
             <p className="eyebrow">For CTOs, VP Engineering and Heads of Engineering</p>
             <h1>Build an AI Engineering Organization.</h1>
             <p className="hero-copy">
-              We embed senior AI engineers into your company to train your engineering teams,
-              implement production-grade coding agents, and build internal AI systems that
-              permanently increase engineering velocity.
+              We embed senior AI engineers to train your teams, implement production-grade coding
+              agents and build internal AI systems that increase engineering velocity.
             </p>
             <div className="cta-row">
               <a href="#assessment" className="button-primary">Book an AI Assessment</a>
@@ -309,86 +221,72 @@ export default function Home() {
       </section>
 
       <section className="section">
-        <div className="pain-layout">
+        <div className="problem-layout">
           <div className="section-heading">
             <h2 className="section-title">AI is evolving faster than engineering teams can keep up.</h2>
           </div>
-          <div className="pain-console" aria-label="AI engineering adoption decision console">
-            <div className="console-top">
-              <div>
-                <span className="console-kicker">Weekly ecosystem intake</span>
-                <p>
-                  Every week introduces new models, new coding agents, better prompting techniques,
-                  better context engineering, new workflows and entirely new ways of building software.
-                </p>
-              </div>
-              <div className="console-status">
-                <span />
-                Continuous evaluation
-              </div>
-            </div>
-            <div className="signal-rail" aria-label="Ecosystem signals" data-reveal-group>
-              {ecosystemSignals.map(([signal, action]) => (
-                <div className="signal-card" key={signal} data-reveal-card>
-                  <span>{signal}</span>
-                  <strong>{action}</strong>
+          <div className="problem-grid">
+            <div className="pain-console" aria-label="AI engineering adoption decision console">
+              <div className="console-top">
+                <div>
+                  <span className="console-kicker">Weekly ecosystem intake</span>
+                  <p>
+                    New models, coding agents and context workflows arrive every week. Teams need a
+                    repeatable way to evaluate what is useful and standardize what works.
+                  </p>
                 </div>
-              ))}
+                <div className="console-status">
+                  <span />
+                  Continuous evaluation
+                </div>
+              </div>
+              <div className="signal-rail" aria-label="Ecosystem signals" data-reveal-group>
+                {ecosystemSignals.map(([signal, action]) => (
+                  <div className="signal-card" key={signal} data-reveal-card>
+                    <span>{signal}</span>
+                    <strong>{action}</strong>
+                  </div>
+                ))}
+              </div>
+              <div className="question-grid" data-reveal-group>
+                {painQuestions.map(([label, question], index) => (
+                  <button className="glass-row question-chip" type="button" key={question} data-reveal-card>
+                    <span className="chip-index">{String(index + 1).padStart(2, "0")}</span>
+                    <span>
+                      <strong>{label}</strong>
+                      {question}
+                    </span>
+                  </button>
+                ))}
+              </div>
+              <div className="console-outcome">
+                <span>Our role</span>
+                <p>Evaluate the ecosystem, implement what works and standardize how engineers use it.</p>
+              </div>
             </div>
-            <div className="question-grid" data-reveal-group>
-              {painQuestions.map(([label, question], index) => (
-                <button className="glass-row question-chip" type="button" key={question} data-reveal-card>
-                  <span className="chip-index">{String(index + 1).padStart(2, "0")}</span>
-                  <span>
-                    <strong>{label}</strong>
-                    {question}
-                  </span>
-                </button>
-              ))}
-            </div>
-            <div className="console-outcome">
-              <span>Our role</span>
-              <p>
-                Evaluate the ecosystem, implement what works, ignore what doesn&apos;t and standardize
-                the practices your engineers use every day.
-              </p>
-            </div>
+            <figure className="workspace-image">
+              <Image
+                src="/engineering-workspace.jpg"
+                alt="Developer workspace with multiple monitors showing engineering workflows"
+                fill
+                sizes="(max-width: 760px) 100vw, 42vw"
+                priority={false}
+              />
+              <figcaption>Workflow image by Jakub Zerdzicki on Unsplash.</figcaption>
+            </figure>
           </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="image-feature">
-          <div>
-            <p className="eyebrow">Operating model</p>
-            <h2 className="section-title">Built inside the engineering workflow, not beside it.</h2>
-            <p>
-              We work where your teams already ship: repositories, pull requests, CI, tickets,
-              docs and internal standards.
-            </p>
-          </div>
-          <figure className="workspace-image">
-            <Image
-              src="/engineering-workspace.jpg"
-              alt="Developer workspace with multiple monitors showing engineering workflows"
-              fill
-              sizes="(max-width: 760px) 100vw, 55vw"
-              priority={false}
-            />
-            <figcaption>Workflow image by Jakub Zerdzicki on Unsplash.</figcaption>
-          </figure>
         </div>
       </section>
 
       <section id="what-we-do" className="section">
         <div className="section-inner">
           <div className="section-heading">
-            <p className="eyebrow">What we do</p>
-            <h2 className="section-title">Senior AI engineering capability, embedded inside your company.</h2>
+            <p className="eyebrow">What we build</p>
+            <h2 className="section-title">AI capability inside your engineering organization.</h2>
           </div>
           <div className="service-grid" data-reveal-group>
             {services.map((service, index) => (
-              <article className="premium-card" key={service.title} data-reveal-card>
+              <article className="premium-card compact-card" key={service.title} data-reveal-card>
                 <div className="card-index">0{index + 1}</div>
                 <h3>{service.title}</h3>
                 <p className="lead">{service.body}</p>
@@ -396,65 +294,18 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="knowledge-layout">
-          <div>
-            <p className="eyebrow">Your company knowledge</p>
-            <h2 className="section-title">Every agent understands your business.</h2>
-            <div className="prose-block compact">
-              <p>
-                We build custom knowledge systems around your company.
-              </p>
-              <p>
-                Agents understand your codebase, documentation, standards, architecture, APIs,
-                libraries, product context and runbooks.
-              </p>
-              <p>
-                Instead of asking generic AI for help, your engineers work with AI that already
-                understands your company.
-              </p>
+          <div className="ownership-strip">
+            <span>No platform.</span>
+            <span>No lock-in.</span>
+            <span>You own every agent, workflow, knowledge base, integration and prompt.</span>
+          </div>
+          <div className="stack-strip">
+            <p className="eyebrow">Works with your stack</p>
+            <div className="logo-grid compact-logo-grid" data-reveal-group>
+              {integrations.map((name) => (
+                <IntegrationLogo name={name} key={name} />
+              ))}
             </div>
-          </div>
-          <KnowledgeVisual />
-        </div>
-      </section>
-
-      <section className="section integrations-section">
-        <div className="section-inner">
-          <div className="section-heading">
-            <p className="eyebrow">Project management</p>
-            <h2 className="section-title">Integrated into your engineering workflow.</h2>
-          </div>
-          <div className="logo-grid" data-reveal-group>
-            {integrations.map((name) => (
-              <IntegrationLogo name={name} key={name} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="section-inner">
-          <div className="section-heading">
-            <p className="eyebrow">Why companies hire us</p>
-            <h2 className="section-title">Built for organizations where engineering quality matters.</h2>
-          </div>
-          <div className="reason-grid" data-reveal-group>
-            {reasons.map((reason) => (
-              <article className="premium-card tall" key={reason.title} data-reveal-card>
-                <h3>{reason.title}</h3>
-                <p>{reason.body}</p>
-                {reason.owned && (
-                  <div className="ownership-list" aria-label="Owned assets">
-                    {reason.owned.map((item) => <span key={item}>{item}</span>)}
-                  </div>
-                )}
-                {reason.owned && <p className="no-lockin">No subscriptions. No lock-in.</p>}
-              </article>
-            ))}
           </div>
         </div>
       </section>
@@ -465,7 +316,7 @@ export default function Home() {
             <p className="eyebrow">How we work</p>
             <h2 className="section-title">A practical path from assessment to independent capability.</h2>
           </div>
-          <div className="timeline" data-reveal-group>
+          <div className="timeline compact-timeline" data-reveal-group>
             {timeline.map((item, index) => (
               <div className="timeline-item" key={item.title} data-reveal-card>
                 <div className="timeline-index">{index + 1}</div>
@@ -482,35 +333,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="section-inner">
-          <div className="section-heading">
-            <p className="eyebrow">Who we are</p>
-            <h2 className="section-title">Senior engineers with operator judgment.</h2>
-          </div>
-          <div className="team-grid" data-reveal-group>
-            {teamMembers.map((member) => (
-              <article className="team-card" key={member.name + member.role} data-reveal-card>
-                <div className="face-placeholder">{member.initials}</div>
-                <div>
-                  <h3>{member.name}</h3>
-                  <span>{member.role}</span>
-                  <p>{member.pedigree}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <a className="about-link" href="/about">Read more about us</a>
-        </div>
-      </section>
-
       <section id="assessment" className="final-section">
         <div className="cta-panel">
           <h2>Don&apos;t outsource AI. Build an engineering organization that knows how to use it.</h2>
           <p>
-            The companies that gain the biggest advantage won&apos;t simply buy AI tools. They&apos;ll build
-            engineering organizations that continuously adapt as AI evolves.
+            The advantage goes to teams that continuously adapt as AI changes.
           </p>
+          <p className="operator-note">Led by senior engineers with operator experience.</p>
           <a href="mailto:hello@example.com?subject=AI%20Engineering%20Assessment">Book Your AI Engineering Assessment</a>
         </div>
       </section>
