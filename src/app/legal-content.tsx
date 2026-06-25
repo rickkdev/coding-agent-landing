@@ -56,6 +56,7 @@ export function LegalPage({ title, updated, intro, sections }: LegalPageProps) {
               <h2>Company</h2>
               <Link href="/#what-we-do">What we do</Link>
               <Link href="/#how-we-work">How we work</Link>
+              <Link href="/about">About</Link>
               <Link href="/#assessment">Assessment</Link>
             </div>
             <div>

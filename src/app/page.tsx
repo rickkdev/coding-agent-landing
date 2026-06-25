@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ScrollReveal } from "./ScrollReveal";
 
 const painQuestions = [
@@ -22,25 +23,25 @@ const services = [
     title: "AI Engineering Leadership",
     body: "We embed with your company as an interim Head of AI Engineering.",
     details:
-      "We define strategy, establish engineering standards, evaluate new technologies and guide adoption across your engineering organization.",
+      "Strategy, standards, technology evaluation and adoption across your engineering organization.",
   },
   {
     title: "Custom Coding Agents",
     body: "We build coding agents specifically for your company.",
     details:
-      "Each agent understands your codebase, architecture, documentation and engineering standards. Not generic AI. Your AI.",
+      "Agents understand your codebase, architecture, documentation and engineering standards.",
   },
   {
     title: "Autonomous Engineering Workflows",
     body: "We build agents that perform real engineering work.",
     details:
-      "Creating pull requests, reviewing pull requests, writing tests, executing end-to-end suites, fixing simple issues, updating tickets, generating documentation and keeping projects synchronized, always under the workflows and permissions your organization defines.",
+      "Pull requests, reviews, tests, issue fixes, documentation and project updates under your permissions.",
   },
   {
     title: "Engineer Enablement",
     body: "We work alongside your engineers every day.",
     details:
-      "No generic workshops. Real projects. Real code. Real pull requests. Your engineers learn modern AI engineering naturally while shipping production software.",
+      "Real projects, real code and real pull requests. Your engineers learn while shipping.",
   },
 ];
 
@@ -118,8 +119,24 @@ const integrations = [
   "Confluence",
 ];
 
+const teamMembers = [
+  {
+    name: "Partner Name",
+    role: "AI Engineering Partner",
+    initials: "PN",
+    pedigree: "Former Staff Engineer. Built production developer platforms, agentic workflows and internal engineering systems.",
+  },
+  {
+    name: "Partner Name",
+    role: "AI Systems Lead",
+    initials: "PN",
+    pedigree: "Former engineering leader. Led platform teams, code quality programs and AI adoption across large codebases.",
+  },
+];
+
 const footerLinks = [
   ["Company", "What we do", "#what-we-do"],
+  ["Company", "About", "/about"],
   ["Company", "How we work", "#how-we-work"],
   ["Company", "Assessment", "#assessment"],
   ["Legal", "Privacy Policy", "/privacy"],
@@ -268,6 +285,7 @@ export default function Home() {
           <div className="nav-links" aria-label="Primary navigation">
             <a href="#what-we-do">What we do</a>
             <a href="#how-we-work">How we work</a>
+            <a href="/about">About</a>
             <a href="#assessment">Assessment</a>
           </div>
         </nav>
@@ -331,11 +349,34 @@ export default function Home() {
             <div className="console-outcome">
               <span>Our role</span>
               <p>
-                Continuously evaluate the ecosystem, implement what works, ignore what doesn&apos;t,
-                and teach your teams industry best practices.
+                Evaluate the ecosystem, implement what works, ignore what doesn&apos;t and standardize
+                the practices your engineers use every day.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="image-feature">
+          <div>
+            <p className="eyebrow">Operating model</p>
+            <h2 className="section-title">Built inside the engineering workflow, not beside it.</h2>
+            <p>
+              We work where your teams already ship: repositories, pull requests, CI, tickets,
+              docs and internal standards.
+            </p>
+          </div>
+          <figure className="workspace-image">
+            <Image
+              src="/engineering-workspace.jpg"
+              alt="Developer workspace with multiple monitors showing engineering workflows"
+              fill
+              sizes="(max-width: 760px) 100vw, 55vw"
+              priority={false}
+            />
+            <figcaption>Workflow image by Jakub Zerdzicki on Unsplash.</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -368,9 +409,8 @@ export default function Home() {
                 We build custom knowledge systems around your company.
               </p>
               <p>
-                Agents understand your codebase, internal documentation, engineering standards,
-                architecture decisions, APIs, internal libraries, product knowledge, runbooks and
-                onboarding documentation.
+                Agents understand your codebase, documentation, standards, architecture, APIs,
+                libraries, product context and runbooks.
               </p>
               <p>
                 Instead of asking generic AI for help, your engineers work with AI that already
@@ -439,6 +479,28 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-inner">
+          <div className="section-heading">
+            <p className="eyebrow">Who we are</p>
+            <h2 className="section-title">Senior engineers with operator judgment.</h2>
+          </div>
+          <div className="team-grid" data-reveal-group>
+            {teamMembers.map((member) => (
+              <article className="team-card" key={member.name + member.role} data-reveal-card>
+                <div className="face-placeholder">{member.initials}</div>
+                <div>
+                  <h3>{member.name}</h3>
+                  <span>{member.role}</span>
+                  <p>{member.pedigree}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <a className="about-link" href="/about">Read more about us</a>
         </div>
       </section>
 
