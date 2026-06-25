@@ -38,6 +38,39 @@ export function LegalPage({ title, updated, intro, sections }: LegalPageProps) {
           ))}
         </div>
       </article>
+
+      <footer className="legal-footer">
+        <div className="footer-inner">
+          <div className="footer-brand">
+            <Link className="brand" href="/" aria-label="AI Engineering Partner home">
+              <span className="brand-mark" />
+              AI Engineering Partner
+            </Link>
+            <p>
+              Senior AI engineers embedded with software companies to build internal AI systems,
+              coding agents and durable engineering capability.
+            </p>
+          </div>
+          <div className="footer-links">
+            <div>
+              <h2>Company</h2>
+              <Link href="/#what-we-do">What we do</Link>
+              <Link href="/#how-we-work">How we work</Link>
+              <Link href="/#assessment">Assessment</Link>
+            </div>
+            <div>
+              <h2>Legal</h2>
+              <Link href="/privacy">Privacy Policy</Link>
+              <Link href="/terms">Terms</Link>
+              <Link href="/security">Security</Link>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <span>© 2026 AI Engineering Partner. All rights reserved.</span>
+            <span>Built for engineering organizations operating at production scale.</span>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

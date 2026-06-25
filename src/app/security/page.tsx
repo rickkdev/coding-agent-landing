@@ -18,6 +18,14 @@ export default function SecurityPage() {
           body: "We use least-privilege access and customer-approved systems for repositories, ticketing, documentation, CI, cloud infrastructure, and communication tools. Access is scoped to the engagement and removed when no longer needed.",
         },
         {
+          title: "Employee confidentiality",
+          body: "Our work is performed by employees and authorized personnel who operate under strict confidentiality obligations, including NDAs and internal policies covering customer code, documentation, architecture, prompts, credentials, roadmaps, business context, and operational data.",
+        },
+        {
+          title: "Authorized personnel only",
+          body: "Customer environments are accessed only by personnel assigned to the engagement and only for the purposes approved by the customer. We do not grant broad internal access to customer systems, and we expect customer access controls to remain the source of truth.",
+        },
+        {
           title: "Human review",
           body: "Production workflows are designed with explicit review boundaries. Coding agents can draft changes, run tests, prepare pull requests, and update tickets, but approval paths are defined by the customer.",
         },

@@ -328,6 +328,11 @@ a {
   line-height: 1.75;
 }
 
+.legal-footer {
+  width: min(100%, 1280px);
+  margin: clamp(5rem, 9vw, 7rem) auto 0;
+}
+
 @media (min-width: 640px) {
   .hero-shell,
   .section,
