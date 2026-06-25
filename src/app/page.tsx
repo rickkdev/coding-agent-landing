@@ -122,9 +122,9 @@ const footerLinks = [
   ["Company", "What we do", "#what-we-do"],
   ["Company", "How we work", "#how-we-work"],
   ["Company", "Assessment", "#assessment"],
-  ["Legal", "Privacy Policy", "#privacy"],
-  ["Legal", "Terms", "#terms"],
-  ["Legal", "Security", "#security"],
+  ["Legal", "Privacy Policy", "/privacy"],
+  ["Legal", "Terms", "/terms"],
+  ["Legal", "Security", "/security"],
 ];
 
 function IntegrationLogo({ name }: { name: string }) {
